@@ -799,9 +799,9 @@ function openUrlCurrentTab(url)
 
 ## 桌面通知
 
-Chrome提供了一个`chrome.notifications`API以便插件推送桌面通知，暂未找到`chrome.notifications`和HTML5自带的`Notification`的显著区别及优势。
+需要声明`notifications`权限。
 
-在后台JS中，无论是使用`chrome.notifications`还是`Notification`都不需要申请权限（HTML5方式需要申请权限），直接使用即可。
+Chrome提供了一个`chrome.notifications`API以便插件推送桌面通知，推荐使用`chrome.notifications`，在最新版本（Chrome/73）中，`background js` 无法调用HTML5自带的`Notification`。
 
 最简单的通知：
 
